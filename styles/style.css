@@ -79,24 +79,27 @@ ol {
   text-decoration-line: underline;
 }
 
+.button:focus {
+  outline: none;
+}
+
 .button:focus-visible {
   outline: 1px solid white;
   outline-offset: -3px;
 }
 
-.button:focus {
-  outline: none;
-}
-
 .content {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 30px;
   flex: 1;
   padding: 0 30px;
-  max-height: 534px;
+}
+
+.result {
+  align-self: flex-end;
 }
 
 .result__video-container {
@@ -109,7 +112,7 @@ ol {
 .result__video {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .search-form {
@@ -161,13 +164,13 @@ ol {
   border: 1px solid rgb(255, 255, 255);
 }
 
+.search-form__textfield:focus {
+  outline: none;
+}
+
 .search-form__label:has(:focus-visible) {
   outline: 1px solid white;
   outline-offset: 1px;
-}
-
-.search-form__textfield:focus {
-  outline: none;
 }
 
 .search-form__checkbox-list {
@@ -212,7 +215,6 @@ ol {
   flex-direction: column;
   align-items: flex-start;
   flex: 1;
-  max-height: 534px;
 }
 
 .title {
