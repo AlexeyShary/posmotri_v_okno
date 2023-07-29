@@ -181,26 +181,20 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
-  align-self: center;
-  width: 19px;
-  height: 19px;
-  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 19px;
+  block-size: 19px;
+  border: 1px solid currentColor;
   margin-right: 5px;
-  cursor: pointer;
-  background-color: transparent;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox {
-  display: inline-block;
-  align-self: center;
-  outline: 1px solid white;
-  outline-offset: 1px;
-  background-color: white;
-  width: 17px;
-  height: 17px;
-  margin-right: 5px;
-  margin-left: 2px;
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  min-inline-size: 15px;
+  min-block-size: 15px;
+  background-color: currentColor;
 }
 
 .search-form__checkbox-list .search-form__label:hover {
